@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solarind | Smart Hybrid Energy</title>
+    
+    <!-- Professional Tech Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind v2 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Smooth Slide-in Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50 antialiased overflow-x-hidden">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+        <!-- Subtle Grid Background for Tech Feel -->
+        <div class="absolute inset-0" style="background-image: radial-gradient(#374151 1px, transparent 1px); background-size: 32px 32px; opacity: 0.2;"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center reveal">
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-gray-800 border border-gray-700 text-gray-300 text-xs font-semibold tracking-widest uppercase mb-8 shadow-sm">
+                Project Solarind
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                Smart Hybrid Energy System
+            </h1>
+            <p class="text-2xl md:text-3xl font-light text-blue-400 mb-8 tracking-wide">
+                Harvest the sun. Capture the wind. Protect your power.
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                An intelligent renewable energy system combining solar generation, wind power, smart cooling, and automated protection into one integrated, hardware-software platform.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#investor" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors shadow-lg w-full sm:w-auto">
+                    Request Early Access
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border border-gray-600 hover:border-gray-400 hover:bg-gray-800 text-white rounded-lg font-semibold transition-colors w-full sm:w-auto">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. THE PROBLEM -->
+    <section id="problem" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm font-bold tracking-widest text-blue-600 uppercase mb-2">The Challenge</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Fragmented Energy Landscape</h3>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">Millions of homes and businesses rely on disjointed, inefficient, and potentially hazardous energy setups.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 reveal delay-100">
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="p-3 bg-gray-100 rounded-lg text-gray-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Unreliable Electricity</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Grid instability causes severe outages. Heavy dependence on backup generators drastically increases operational OPEX.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="p-3 bg-yellow-50 text-yellow-600 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Solar Limitations</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Generation is strictly limited to daylight. High ambient temperatures reduce panel efficiency, and active thermal protection is non-existent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2">
+                  <div class="rounded-xl overflow-hidden bg-gray-100 border border-gray-200 aspect-w-16 aspect-h-12 shadow-inner">
+                      <!-- Dummy Image -->
+                      <img src="https://www.solar-energy-california.com/img/7c3b4fa2b59cf1deeaa2c3d1c7babdaf.jpg?20" alt="Solar Limitations" class="w-full h-full object-cover opacity-90 mix-blend-multiply">
+                  </div>
+                  <div class="rounded-xl overflow-hidden bg-gray-100 border border-gray-200 aspect-w-16 aspect-h-12 shadow-inner">
+                      <!-- Dummy Image -->
+                      <img src="https://www.maysunsolar.com/wp-content/uploads/2023/08/%E5%8D%9A%E6%96%87%E9%85%8D%E5%9B%BE-01-1024x576.jpg" alt="Solar Limitations" class="w-full h-full object-cover opacity-90 mix-blend-multiply">
+                  </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal delay-200">
+                <div class="rounded-xl overflow-hidden bg-gray-100 border border-gray-200 aspect-w-16 aspect-h-12 shadow-inner order-2 md:order-1">
+                    <!-- Dummy Image -->
+                    <img src="https://punscentral.com/wp-content/uploads/2024/09/wind-puns-2-728x410.jpg" alt="Wind Limitations" class="w-full h-full object-cover opacity-90 mix-blend-multiply">
+                </div>
+                <div class="space-y-6 order-1 md:order-2">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="p-3 bg-blue-50 text-blue-600 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Wind Standalone Complexity</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Small wind systems are often isolated. Residential and commercial users require integrated, plug-and-play management solutions.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="p-3 bg-red-50 text-red-600 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Critical Safety Risks</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Solar arrays can experience electrical faults and severe overheating. Current market solutions only react after catastrophic failure occurs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. THE SOLUTION -->
+    <section id="solution" class="py-24 bg-gray-900 text-white relative border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center reveal">
+            <h2 class="text-sm font-bold tracking-widest text-blue-500 uppercase mb-2">The Solution</h2>
+            <h3 class="text-3xl md:text-5xl font-bold mb-6">A Unified Intelligence Platform</h3>
+            <p class="text-xl text-gray-400 mb-16 font-light max-w-3xl mx-auto">A smart hybrid architecture that transcends power generation to actively manage, optimize, and defend your energy infrastructure.</p>
+            
+            <div class="grid sm:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-colors">
+                    <svg class="w-10 h-10 text-blue-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <h4 class="font-bold text-xl mb-3 text-white">Continuous Generation</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Seamless integration of Solar PV and Wind turbine inputs to ensure round-the-clock energy harvesting.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-colors">
+                    <svg class="w-10 h-10 text-green-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    <h4 class="font-bold text-xl mb-3 text-white">Smart Optimization</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">An intelligent central controller that actively monitors load balancing, battery health, and system thermals.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-colors">
+                    <svg class="w-10 h-10 text-red-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h4 class="font-bold text-xl mb-3 text-white">Active Protection</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Automated thermal cooling mechanisms and integrated fire-suppression protocols deploy instantly upon fault detection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 & 5. ARCHITECTURE & DEMO -->
+    <section id="architecture" class="py-24 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">System Architecture</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Energy Generation</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Solar PV modules</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Micro-wind turbine</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Energy Management</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Smart hybrid inverter</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> MPPT Charge controller</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> LiFePO4 Storage</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Intelligence Layer</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> Thermal sensors</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> Particulate/Smoke sensors</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> Cloud IoT telemetry</li>
+                    </ul>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Safety Layer</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-medium">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-red-500"></div> Active cooling module</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-red-500"></div> Automated disconnects</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-red-500"></div> Fire suppression unit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 reveal">Operational Logic</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Normal Mode -->
+                <div class="rounded-xl bg-white border border-gray-200 shadow-sm reveal delay-100 overflow-hidden relative">
+                    <div class="h-1.5 w-full bg-green-500"></div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-xl text-gray-900 mb-6 flex items-center gap-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div> Normal Mode
+                        </h4>
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Panels capture peak sunlight.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Turbine supplements power generation.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Smart controller balances load.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Battery banks store excess capacity.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cooling Mode -->
+                <div class="rounded-xl bg-white border border-gray-200 shadow-sm reveal delay-200 overflow-hidden relative">
+                    <div class="h-1.5 w-full bg-yellow-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="font-bold text-xl text-gray-900 flex items-center gap-2">
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse"></div> Cooling Mode
+                            </h4>
+                            <span class="text-[10px] font-bold tracking-wider uppercase text-yellow-600 bg-yellow-50 px-2 py-1 rounded">Temp Trigger</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Detects panel surface temperature spikes.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Activates targeted airflow system.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Mitigates thermal degradation.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Restores optimal conversion efficiency.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Emergency Mode -->
+                <div class="rounded-xl bg-white border border-gray-200 shadow-sm reveal delay-300 overflow-hidden relative">
+                    <div class="h-1.5 w-full bg-red-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="font-bold text-xl text-gray-900 flex items-center gap-2">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></div> Emergency
+                            </h4>
+                            <span class="text-[10px] font-bold tracking-wider uppercase text-red-600 bg-red-50 px-2 py-1 rounded">Smoke/Fire</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                Hard-disconnects solar array from grid.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                Engages hardware safety response.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                Releases targeted fire suppressant.
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                Transmits critical telemetry to owner.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. THE MOAT -->
+    <section class="py-24 bg-gray-900 text-white border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center reveal">
+            <h2 class="text-sm font-bold tracking-widest text-blue-500 uppercase mb-2">Competitive Advantage</h2>
+            <h3 class="text-3xl md:text-5xl font-bold mb-8">Our Defensible Moat</h3>
+            
+            <div class="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700 shadow-xl max-w-4xl mx-auto">
+                <p class="text-lg md:text-xl font-light mb-10 leading-relaxed text-gray-300">
+                    Traditional competitors manufacture single-function hardware. <strong class="text-white font-semibold">Solarind</strong> engineers an integrated ecosystem. A competitor can copy a solar panel or a turbine—but replicating a fully automated, software-governed hardware network with active physical safety features establishes a massive barrier to entry.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+                    <span class="bg-gray-900 border border-gray-600 text-gray-200 px-5 py-2.5 rounded flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Hybrid Generation
+                    </span>
+                    <span class="bg-gray-900 border border-gray-600 text-gray-200 px-5 py-2.5 rounded flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Machine Intelligence
+                    </span>
+                    <span class="bg-gray-900 border border-gray-600 text-gray-200 px-5 py-2.5 rounded flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Active Thermal Cooling
+                    </span>
+                    <span class="bg-gray-900 border border-gray-600 text-gray-200 px-5 py-2.5 rounded flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Automated Safety Protocols
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BUSINESS MODEL -->
+    <section id="business-model" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">Business Model Matrix</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Revenue -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-6">Revenue Streams</h3>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="border-b border-gray-100 pb-3"><strong>Hardware Sales</strong> <br><span class="text-gray-500 font-light">Direct system sales.</span></li>
+                        <li class="border-b border-gray-100 pb-3"><strong>Installation Fees</strong> <br><span class="text-gray-500 font-light">Certified professional setup.</span></li>
+                        <li class="border-b border-gray-100 pb-3"><strong>Maintenance SLAs</strong> <br><span class="text-gray-500 font-light">Annual hardware servicing.</span></li>
+                        <li class="pb-2"><strong>SaaS Subscriptions</strong> <br><span class="text-gray-500 font-light">Premium telemetry and control.</span></li>
+                    </ul>
+                </div>
+                <!-- Segments -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-6">Target Segments</h3>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="border-b border-gray-100 pb-3"><strong>Primary Markets</strong> <br><span class="text-gray-500 font-light">Residential, SMEs, Agriculture.</span></li>
+                        <li class="pb-2"><strong>Secondary Markets</strong> <br><span class="text-gray-500 font-light">Healthcare, Education, Remote/Off-grid Communities.</span></li>
+                    </ul>
+                </div>
+                <!-- Channels -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-6">Distribution</h3>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="border-b border-gray-100 pb-3">Direct-to-Consumer (D2C) via web.</li>
+                        <li class="border-b border-gray-100 pb-3">B2B Certified Contractor Network.</li>
+                        <li class="border-b border-gray-100 pb-3">Real Estate Developer Partnerships.</li>
+                        <li class="pb-2">Government Clean Energy Initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MARKET & SWOT -->
+    <section id="market-swot" class="py-24 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Market -->
+            <div class="mb-24 reveal">
+                <div class="flex flex-col md:flex-row gap-12 items-center bg-gray-50 p-8 md:p-12 rounded-xl border border-gray-200">
+                    <div class="md:w-1/3">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Go-to-Market</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed">Strategic rollout prioritizing high-need, high-potential regions before global scaling.</p>
+                    </div>
+                    <div class="md:w-2/3 grid sm:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Phase 1: Nigeria & Africa</h3>
+                            <p class="text-gray-500 text-sm">Capitalizing on severe grid unreliability, peak solar potential, and an exploding rate of off-grid renewable adoption.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Phase 2: Global Expansion</h3>
+                            <p class="text-gray-500 text-sm">Scaling to emerging markets, isolated global communities, and enterprise commercial real estate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SWOT -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 reveal">SWOT Analysis</h2>
+            <div class="grid sm:grid-cols-2 gap-6 reveal delay-100">
+                <!-- Strengths -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-blue-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> Strengths
+                    </h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> True hybrid redundancy.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Deep hardware/software integration.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Proprietary safety mechanisms.</li>
+                    </ul>
+                </div>
+                <!-- Weaknesses -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-gray-400">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg> Weaknesses
+                    </h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Higher initial CAPEX vs standard solar.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Increased installation complexity.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Extensive safety validation required.</li>
+                    </ul>
+                </div>
+                <!-- Opportunities -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-green-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Opportunities
+                    </h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Rapidly expanding global green sector.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Rising demand for autonomous grid backup.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Favorable government ESG subsidies.</li>
+                    </ul>
+                </div>
+                <!-- Threats -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm border-t-4 border-t-red-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Threats
+                    </h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Low-cost commodity solar competitors.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Lithium/hardware supply chain volatility.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-gray-400"></div> Strict regional compliance/regulatory hurdles.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. ROADMAP & TEAM -->
+    <section id="roadmap" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            
+            <!-- Roadmap (Minimal Vertical) -->
+            <div class="reveal">
+                <h2 class="text-2xl md:text-3xl font-bold mb-10">Product Roadmap</h2>
+                <div class="relative pl-6 border-l border-gray-700 space-y-10">
+                    
+                    <div class="relative">
+                        <div class="absolute -left-[31px] w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+                        <h3 class="font-bold text-lg text-white mb-1">Phase 1: Prototyping</h3>
+                        <p class="text-xs text-blue-400 mb-2 font-mono uppercase tracking-wide">Months 1–12</p>
+                        <p class="text-gray-400 text-sm">Develop core hybrid hardware module, finalize PCB design, and build V1 IoT software controller.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[31px] w-4 h-4 bg-gray-600 rounded-full border-4 border-gray-900"></div>
+                        <h3 class="font-bold text-lg text-gray-300 mb-1">Phase 2: Field Validation</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-mono uppercase tracking-wide">Months 13–18</p>
+                        <p class="text-gray-400 text-sm">Deploy beta units to controlled residential and SME environments. Stress-test under varied climatic conditions.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[31px] w-4 h-4 bg-gray-600 rounded-full border-4 border-gray-900"></div>
+                        <h3 class="font-bold text-lg text-gray-300 mb-1">Phase 3: Commercial Release</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-mono uppercase tracking-wide">Month 19+</p>
+                        <p class="text-gray-400 text-sm">Full-scale manufacturing run and rollout of Residential and Enterprise SKU lines.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Team -->
+            <div class="reveal delay-200">
+                <h2 class="text-2xl md:text-3xl font-bold mb-10">Core Engineering & Ops</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+                        <div>
+                            <h3 class="text-white font-bold">Hardware Engineering</h3>
+                            <p class="text-gray-400 text-sm">Renewable, Electrical, & Mechanical Design</p>
+                        </div>
+                        <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-700">Crucial Roles</span>
+                    </div>
+                    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+                        <div>
+                            <h3 class="text-white font-bold">Software & Telemetry</h3>
+                            <p class="text-gray-400 text-sm">Embedded Systems & Cloud Infrastructure</p>
+                        </div>
+                        <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-700">Crucial Roles</span>
+                    </div>
+                    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+                        <div>
+                            <h3 class="text-white font-bold">Business Operations</h3>
+                            <p class="text-gray-400 text-sm">Supply Chain, Compliance, & GTM Strategy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. INVESTOR ASK -->
+    <section id="investor" class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <h2 class="text-sm font-bold tracking-widest text-blue-600 uppercase mb-2">Fundraising</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Investment Ask</h3>
+            <p class="text-xl text-gray-500 mb-12">Seeking <span class="font-bold text-gray-900">$XXX,XXX</span> Pre-seed Investment</p>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 md:p-12 text-left">
+                <h4 class="text-lg font-bold text-gray-900 mb-8 border-b border-gray-100 pb-4">Allocation of Funds</h4>
+                
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-medium text-gray-700">R&D and Prototyping</span>
+                            <span class="text-blue-600 font-bold">40%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded h-2">
+                            <div class="bg-blue-600 h-2 rounded" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-medium text-gray-700">Engineering & Validation Testing</span>
+                            <span class="text-blue-500 font-bold">25%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded h-2">
+                            <div class="bg-blue-500 h-2 rounded" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-medium text-gray-700">Supply Chain & Mfg Setup</span>
+                            <span class="text-gray-600 font-bold">20%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded h-2">
+                            <div class="bg-gray-400 h-2 rounded" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-medium text-gray-700">Marketing & Pilot Partnerships</span>
+                            <span class="text-gray-600 font-bold">10%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded h-2">
+                            <div class="bg-gray-300 h-2 rounded" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm">
+                            <span class="font-medium text-gray-700">Legal, IP, & Admin</span>
+                            <span class="text-gray-600 font-bold">5%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded h-2">
+                            <div class="bg-gray-200 h-2 rounded" style="width: 5%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-gray-100 bg-gray-50 -mx-8 -mb-8 p-8 md:p-8 rounded-b-xl">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        <strong class="text-gray-900">Catalyst:</strong> This injection drives us through TRL-7 (System Prototype Demonstration in Operational Environment), secures foundational IP, and establishes our initial paid pilot installations within 12 months.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. CLOSING / CTA -->
+    <section id="contact" class="py-32 bg-gray-900 text-white text-center relative overflow-hidden">
+        <!-- Abstract gradient blob -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600 opacity-20 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10 reveal">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">The Future Grid is Hybrid.</h2>
+            <p class="text-xl md:text-2xl font-light text-gray-300 mb-12">
+                Intelligent. Resilient. Secure.
+            </p>
+            
+            <div class="inline-block mt-8">
+                <a href="mailto:vickXs@gmail.com" class="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl text-lg">
+                    Join us as we build the next system
+                    <svg class="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <p class="mt-6 text-sm text-gray-500 font-mono tracking-widest uppercase">Project Solarind</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intersection Observer Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
